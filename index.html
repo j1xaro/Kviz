@@ -17,6 +17,9 @@
 
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
 
 </head>
 
@@ -32,7 +35,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
+          <!-- <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="kviz.html">Kviz</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
@@ -40,7 +43,7 @@
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="kontakt.html">Kontakt</a>
-          </li>
+          </li> -->
 		  <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="prijava.html">Prijava</a>
           </li>
@@ -57,7 +60,7 @@
       <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
 
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0">Pozdravljeni!</h1>
+	  <h1 class="ml2 masthead-heading text-uppercase mb-0">Pozdravljeni!</h1>
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -70,7 +73,7 @@
 
       <!-- Masthead Subheading -->
       <p class="masthead-subheading font-weight-light mb-0"></p>
- <img src="kviz.jpg" alt="kviz">
+ <img src="kviz.jpg" class="thumbnail" alt="kviz">
     </div>
   </header>
   
@@ -196,7 +199,15 @@
           <p class="lead">Kviz je preprosta igra, kjer dobivaš vprašanja. Vsako vprašanje ima 3 odgovore, za katera dobiš točko, če si pravilno odgovoril. V nasprotnem primeru je ne dobiš.</p>
         </div>
         <div class="col-lg-4 mr-auto">
-          <p class="lead">Za igranje Kviz-a se morate prijaviti.</p>
+          <p class="lead" >Teme so razližne ter zanimive, in sicer:
+		  <button data-aos="flip-left" class="button">SLOVENŠČINA</button>
+		  <button data-aos="flip-left" class="button"> MATEMATIKA</button>
+		  <button data-aos="flip-left" class="button"> GEOGRAFIJA</button>
+		  <button data-aos="flip-left" class="button">ZGODOVINA</button>
+		  <button data-aos="flip-left" class="button"> ŠPORT</button>
+		  <button data-aos="flip-left" class="button"> FILMI</button>
+		  <br>
+		  Za igranje Kviz-a se morate prijaviti.</p>
         </div>
       </div>
 
@@ -217,6 +228,7 @@
 
       <!-- Contact Section Heading -->
       <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Kontaktirajte me</h2>
+          <h3 class="page-section-subheading text-center text-muted">Vprašanja, ideje ...</h3>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -575,6 +587,37 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
+  
+  <script>// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  var image = document.getElementsByClassName('thumbnail');
+new simpleParallax(image);
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  
 
 </body>
 
