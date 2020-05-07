@@ -3,3 +3,40 @@
   cursor: pointer;
 }
 
+#odgovori
+{
+ vertical-align: middle;
+  padding: 70px 0;
+  text-align: center;
+margin-top:200px;
+}
+
+.b1:focus
+{
+  outline: none;
+}
+
+.b1
+{
+  background-color: Green;
+  border: 1px solid black;
+  color: black;
+  padding: 20px 100px;
+  text-align: center;
+  font-size: 20px;
+    font-weight: bold;
+   
+        
+        border-radius: 5px;
+  transition: 0.5s;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  width: 400px;
+}
+#demo
+{
+  text-align: center;
+  font-size: 200%;
+  
+  
+}
