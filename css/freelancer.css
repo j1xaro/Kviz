@@ -1791,6 +1791,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.5;
+  text-color: #555;
 }
 
 .col-form-label-lg {
@@ -1851,6 +1852,7 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 1rem;
+color:red;
 }
 
 .form-text {
