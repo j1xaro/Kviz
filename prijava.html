@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Prijava</title>
+  <title>Kviz</title>
 
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,31 +17,278 @@
 
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 
 </head>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="login.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<body id="page-top">
 
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
-
-
-    <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Kviz</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Meni
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="kviz.html">Kviz</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="pravila.html">Pravila</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="kontakt.html">Kontakt</a>
+          </li> -->
+		  <!-- <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="prijava.html">Prijava</a>
+          </li> -->
+        </ul>
+      </div>
     </div>
+  </nav>
 
-  </div>
-</div>
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+
+      <!-- Masthead Avatar Image -->
+      <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+
+      <!-- Masthead Heading -->
+	  <h1 class="ml2 masthead-heading text-uppercase mb-0">Prijava</h1>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line">
+		</div>
+      </div>
+
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0">
+	  
+          <div class="container">
+            <div class="intro-text">
+              
+          
+            </div>
+          </div>
+       <br><br>
+       
+     
+                <div class="ravno">
+                    <input   type="text" id="username" name="username" placeholder="Uporabniško ime"/><br>
+                </div>
+				<br>
+                <div class="ravno">
+                    <input type="password" id="password" name="password" placeholder="Geslo" />
+                </div> 
+				<br>
+                <div   style="text-align:center" >
+                                        <input  type="submit" id="submit"  class="btn btn-success" value="Prijava"  onclick="validate()" name="sub">
+                                    </div>
+							
+                <br><div id="reg" style="text-align:center" >Še nimate računa? <a href="registracija.html" style="color:red"> Ustvarite račun</a>
+                </div>
+                                    <br>
+           
+           
+			
+
+         <script src="logincheck.js"></script>  </p>
+ 
+    </div>
+  </header>
+  
+ 
+
+
+  <!-- Portfolio Section
+  <!-- <section class="page-section portfolio" id="portfolio"> -->
+    <!-- <div class="container"> -->
+
+    <!--  Portfolio Section Heading
+      <!-- <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2> -->
+
+    <!-- Icon Divider
+      <!-- <div class="divider-custom"> -->
+        <!-- <div class="divider-custom-line"></div> -->
+        <!-- <div class="divider-custom-icon"> -->
+          <!-- <i class="fas fa-star"></i> -->
+        <!-- </div> -->
+        <!-- <div class="divider-custom-line"></div> -->
+      <!-- </div> -->
+
+     <!-- Portfolio Grid Items
+      <!-- <div class="row"> -->
+
+       <!-- Portfolio Item 1
+        <!-- <div class="col-md-6 col-lg-4"> -->
+          <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1"> -->
+            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+              <!-- <div class="portfolio-item-caption-content text-center text-white"> -->
+                <!-- <i class="fas fa-plus fa-3x"></i> -->
+              <!-- </div> -->
+            <!-- </div> -->
+            <!-- <img class="img-fluid" src="img/portfolio/cabin.png" alt=""> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+       <!-- Portfolio Item 2
+        <!-- <div class="col-md-6 col-lg-4"> -->
+          <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2"> -->
+            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+              <!-- <div class="portfolio-item-caption-content text-center text-white"> -->
+                <!-- <i class="fas fa-plus fa-3x"></i> -->
+              <!-- </div> -->
+            <!-- </div> -->
+            <!-- <img class="img-fluid" src="img/portfolio/cake.png" alt=""> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+        <!--Portfolio Item 3
+        <!-- <div class="col-md-6 col-lg-4"> -->
+          <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3"> -->
+            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+              <!-- <div class="portfolio-item-caption-content text-center text-white"> -->
+                <!-- <i class="fas fa-plus fa-3x"></i> -->
+              <!-- </div> -->
+            <!-- </div> -->
+            <!-- <img class="img-fluid" src="img/portfolio/circus.png" alt=""> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+      <!--  Portfolio Item 4
+        <!-- <div class="col-md-6 col-lg-4"> -->
+          <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4"> -->
+            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+              <!-- <div class="portfolio-item-caption-content text-center text-white"> -->
+                <!-- <i class="fas fa-plus fa-3x"></i> -->
+              <!-- </div> -->
+            <!-- </div> -->
+            <!-- <img class="img-fluid" src="img/portfolio/game.png" alt=""> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+     <!--   Portfolio Item 5
+        <!-- <div class="col-md-6 col-lg-4"> -->
+          <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5"> -->
+            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+              <!-- <div class="portfolio-item-caption-content text-center text-white"> -->
+                <!-- <i class="fas fa-plus fa-3x"></i> -->
+              <!-- </div> -->
+            <!-- </div> -->
+            <!-- <img class="img-fluid" src="img/portfolio/safe.png" alt=""> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+     <!--   Portfolio Item 6
+        <!-- <div class="col-md-6 col-lg-4"> -->
+          <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6"> -->
+            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+              <!-- <div class="portfolio-item-caption-content text-center text-white"> -->
+                <!-- <i class="fas fa-plus fa-3x"></i> -->
+              <!-- </div> -->
+            <!-- </div> -->
+            <!-- <img class="img-fluid" src="img/portfolio/submarine.png" alt=""> -->
+          <!-- </div> -->
+        <!-- </div> -->
+
+      <!-- </div> -->
+    <!--  /.row
+
+    <!-- </div> -->
+  <!-- </section>  -->
+
+  <!-- About Section -->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+
+      <!-- About Section Heading -->
+      
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- About Section Content -->
+      
+
+      <!-- About Section Button 
+      <div class="text-center mt-4">
+        <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
+          <i class="fas fa-download mr-2"></i>
+          Free Download!
+        </a>
+      </div>-->
+
+    </div>
+  </section>
+
+
+
+ 
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>
+  
+  <script>// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  var image = document.getElementsByClassName('thumbnail');
+new simpleParallax(image);
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  
+
+</body>
+
+</html>
