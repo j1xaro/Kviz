@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Kviz</title>
+
+  <!-- Custom fonts for this theme -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="css/freelancer.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">Kviz</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Meni
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="kviz.html">Domov</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="teme.html">Teme</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="vprasanja.html">Vprasanja</a>
+          </li>
+		  <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="rezultati.html">Rezultati</a>
+          </li>
+		  <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="nastavitve.html">Nastavitve</a>
+          </li>
+		  <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="prijava.html">Odjava</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+
+      <!-- Masthead Avatar Image -->
+      <a href="teme.html"></a>
+
+      <!-- Masthead Heading -->
+      <h1 class="masthead-heading text-uppercase mb-0">Vprašanja</h1>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line">
+		</div>
+		
+      </div>
+	  <table class="table table-striped table-light" align="center">
+          
+        <thead>
+          <tr>
+            <th scope="col">Št.</th>
+            <th scope="col">Vprašanje</th>
+            <th scope="col">Tema</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Kdo je odkril Ameriko?</td>
+            <td>Zgodovina</td>
+            <td data-toggle="modal" class="pointer" data-target="#exampleModal" >Uredi</td>
+            <td class="pointer"><a onclick="izbris();">Izbriši</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Kdaj se je končala 2 sv. vojna?</td>
+            <td>Zgodovina</td>
+            <td data-toggle="modal" class="pointer" data-target="#exampleModal" >Uredi</td>
+            <td class="pointer"><a onclick="izbris();">Izbriši</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Koliko je 1+1?</td>
+            <td>Matematika</td>
+            <td data-toggle="modal" class="pointer" data-target="#exampleModal" >Uredi</td>
+            <td class="pointer"><a onclick="izbris();">Izbriši</a></td>
+          </tr>
+        </tbody>
+      </table>
+    
+     <script src="izbris.js"></script>  
+			
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+    -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Urejanje vprašanja</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <div class="modal-body">
+             <form>
+               <div class="form-group">
+                 <label for="recipient-name" class="col-form-label">Vprašanje:</label>
+                 <input type="text" class="form-control" id="recipient-name" value="Kdo je odkril Ameriko?">
+               </div>
+               <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Odgovor 1:</label>
+                    <input type="text" class="form-control" id="recipient-name" value="Krištof Kolumb" >
+                  </div>
+                  <div class="form-group">
+                 <label for="recipient-name" class="col-form-label">Odgovor 2:</label>
+                 <input type="text" class="form-control" id="recipient-name" value="Peter Novak">
+               </div>
+               <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Odgovor 3:</label>
+                    <input type="text" class="form-control" id="recipient-name" value="Jure Zemlja">
+                  </div>
+             </form>
+             <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Odgovor 4:</label>
+                    <input type="text" class="form-control" id="recipient-name" value="Aljaž Mah">
+                  </div>
+           </div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-primary" data-dismiss="modal">Prekliči</button>
+             <button type="button" class="btn btn-primary" data-dismiss="modal">Shrani</button>
+           </div>
+         </div>
+       </div>
+     </div>	
+	   
+
+	 
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0"></p>
+ 
+    </div>
+	
+  </header>
+  
+  
+  
+ 
+
+
+
+
+  
+
+      
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>
